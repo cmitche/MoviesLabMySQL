@@ -1,3 +1,5 @@
+# Movies Lab MySQL
+
 ## Create a query to find all movies in the Sci-Fi genre.
 select * FROM movies WHERE Genre="Sci-Fi";
 
