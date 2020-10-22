@@ -31,38 +31,38 @@ ALTER TABLE movies
 ADD Year INT UNSIGNED NOT NULL;
 
 
-## Update the values of the movies to reflect the Year Created.
+## Update the values of the movies to reflect the Year created.
 UPDATE movies 
 SET Year = 1986
 WHERE MovieID = 1;
 
 UPDATE movies 
 SET Year = 1998
-WHERE MovieID = 10;
+WHERE MovieID = 2;
 
 UPDATE movies 
 SET Year = 1995
-WHERE MovieID = 11;
+WHERE MovieID = 3;
 
 UPDATE movies 
 SET Year = 2015
-WHERE MovieID = 13;
+WHERE MovieID = 4;
 
 UPDATE movies 
 SET Year = 1997
-WHERE MovieID = 14;
+WHERE MovieID = 5;
 
 UPDATE movies 
 SET Year = 2008
-WHERE MovieID = 15;
+WHERE MovieID = 6;
 
 UPDATE movies 
 SET Year = 1987
-WHERE MovieID = 16;
+WHERE MovieID = 7;
 
 UPDATE movies 
 SET Year = 2001
-WHERE MovieID = 17;
+WHERE MovieID = 8;
 
 ## Find all movies whose titles END with the letter "A".
 SELECT title FROM movies WHERE title LIKE'%A';
