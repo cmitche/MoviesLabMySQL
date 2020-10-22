@@ -22,7 +22,7 @@ select MovieID, Rating FROM movies WHERE Genre IN ("Horror", "Documentary");
 select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating;
 
 ## That last query isn't very informative for ratings that only have 1 entry. Use a HAVING COUNT(*) > 1 clause to only show ratings with multiple movies showing.
-select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating HAVING COUNT(*)
+select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating HAVING COUNT(*) > 1;
 
 
 # *** STRETCH GOAL ***
