@@ -1,3 +1,5 @@
+# Movies Lab MySQL
+
 ## Create a query to find all movies in the Sci-Fi genre.
 select * FROM movies WHERE Genre="Sci-Fi";
 
@@ -28,7 +30,7 @@ select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP 
 ALTER TABLE moviesTable2
 ADD Year INT UNSIGNED NOT NULL;
 
-select * from moviesTable2;
+SELECT * FROM moviesTable2;
 
 ## Update the values of the movies to reflect the Year Created.
 UPDATE moviesTable2 
@@ -63,5 +65,7 @@ UPDATE moviesTable2
 SET Year = 2001
 WHERE MovieID = 17;
 
-## Find all movies whose titles end with the letter "A".
+SELECT * FROM moviesTable2;
+
+## Find all movies whose titles END with the letter "A".
 SELECT title FROM moviesTable2 WHERE title LIKE'%A';
