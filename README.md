@@ -20,4 +20,48 @@ select MovieID, Rating FROM movies WHERE Genre IN ("Horror", "Documentary");
 select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating;
 
 ## That last query isn't very informative for ratings that only have 1 entry. Use a HAVING COUNT(*) > 1 clause to only show ratings with multiple movies showing.
-select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating HAVING COUNT(*) > 1;
+select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP BY Rating HAVING COUNT(*)
+
+
+# *** STRETCH GOAL ***
+## Alter table and add a new column for the Year created.
+ALTER TABLE moviesTable2
+ADD Year INT UNSIGNED NOT NULL;
+
+select * from moviesTable2;
+
+## Update the values of the movies to reflect the Year Created.
+UPDATE moviesTable2 
+SET Year = 1986
+WHERE MovieID = 1;
+
+UPDATE moviesTable2 
+SET Year = 1998
+WHERE MovieID = 10;
+
+UPDATE moviesTable2 
+SET Year = 1995
+WHERE MovieID = 11;
+
+UPDATE moviesTable2 
+SET Year = 2015
+WHERE MovieID = 13;
+
+UPDATE moviesTable2 
+SET Year = 1997
+WHERE MovieID = 14;
+
+UPDATE moviesTable2 
+SET Year = 2008
+WHERE MovieID = 15;
+
+UPDATE moviesTable2 
+SET Year = 1987
+WHERE MovieID = 16;
+
+UPDATE moviesTable2 
+SET Year = 2001
+WHERE MovieID = 17;
+
+## Find all movies whose titles end with the letter "A".
+SELECT title FROM moviesTable2 WHERE title LIKE'%A';
