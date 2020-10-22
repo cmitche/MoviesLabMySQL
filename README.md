@@ -27,45 +27,42 @@ select Rating, AVG(IMDBScore), MAX(IMDBScore), MIN(IMDBScore) FROM movies GROUP 
 
 # *** STRETCH GOAL ***
 ## Alter table and add a new column for the Year created.
-ALTER TABLE moviesTable2
+ALTER TABLE movies
 ADD Year INT UNSIGNED NOT NULL;
 
-SELECT * FROM moviesTable2;
 
 ## Update the values of the movies to reflect the Year Created.
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 1986
 WHERE MovieID = 1;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 1998
 WHERE MovieID = 10;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 1995
 WHERE MovieID = 11;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 2015
 WHERE MovieID = 13;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 1997
 WHERE MovieID = 14;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 2008
 WHERE MovieID = 15;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 1987
 WHERE MovieID = 16;
 
-UPDATE moviesTable2 
+UPDATE movies 
 SET Year = 2001
 WHERE MovieID = 17;
 
-SELECT * FROM moviesTable2;
-
 ## Find all movies whose titles END with the letter "A".
-SELECT title FROM moviesTable2 WHERE title LIKE'%A';
+SELECT title FROM movies WHERE title LIKE'%A';
